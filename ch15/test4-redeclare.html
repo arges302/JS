@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // test1
+    // 두 곳에서 접근한 변수가 global로 선언된것 , 모두 동일한 변수 참조
+    var name = '홍길동'
+    function myFun1() {
+      name = '류현진' // var name = '홍길동' 을 대체 하게 되어 앞으로 name변수는 다 류현진이다
+      document.write('inner: ' + name + '<br/>') // 류현진
+    }
+    myFun1()
+    document.write('outer: ' + name + '<br/>') // 류현진
+
+    // test2
+    var name2 = '홍길동'
+    function myFun2() {
+      var name2 = '류현진'
+      document.write('inner: ' + name2 + '<br/>') // 류현진
+    }
+    myFun2()
+    document.write('outer: ' + name2 + '<br/>') // 홍길동
+
+    // test3
+    // 동일 scope 내에서 중복 선언
+    // js var 이 허용하지만 권장하지 않는다.
+    var name3 = '홍길동'
+    // 여기서 찍으면 홍길동
+    var name3 = '류현진'
+    // 여기서 찍으면 류현진
+  </script>
+</body>
+
+</html>
