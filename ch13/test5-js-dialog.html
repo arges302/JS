@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function myEventFun1(){
+      var result = alert('I am alert dialog');
+      console.log(result)
+    }
+    function myEventFun2(){
+      var result = confirm('I am confirm dialog');
+      console.log(result)
+    }
+    function myEventFun3(){
+      var result = prompt('I am prompt dialog');
+      console.log(result)
+    }
+  </script>
+</head>
+<body>
+  <button onclick="myEventFun1()">alert</button>
+  <br/>
+  <button onclick="myEventFun2()">confirm</button>
+  <br>
+  <button onclick="myEventFun3()">prompt</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // js 에선 한줄의 실행이 끝난 부분을 꼭 ; 으로 명시하지 않아도 상관은 없다.
+    // ; 을 생략해도 문제는 없다.
+    // 다른 대부분의 언어에서 한줄이 이곳에서 끝난거야를 명시하기 위해 ; 을
+    // 많이 쓰다보니 관습상 쓰는 것일 뿐이다.
+
+    // dom node 객체 획득 부분이 dom node 가 메모리에 할당된 후 실행되게 하면 된다.
+    // window - 브라우저 자체를 지칭
+    // onload - 브라우저에서 이 html 문서가 파싱이 완료, 메모리 할당, 유저화면에 나온 순간
+    // 일반적으로 on 은 이벤트를 지칭함
+    window.onload = function () {
+      // 일반적으로 dom node 를 접근하는 js 코드는 onload 이벤트 안에다 작성
+      var a1 = document.querySelector('#a1');
+      a1.onclick = function () {
+        a1.style.color = 'red';
+      }
+    }
+
+    
+  </script>
+</head>
+
+<body>
+  <h1 id="a1">이부분</h1>
+</body>
+
+</html>

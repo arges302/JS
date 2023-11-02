@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var data1;
+    // typeof - 변수의 타입
+    document.write("data1 type is " + typeof data1 + "<br/>")
+    
+    data1 = 10
+    document.write("10 data1 type is " + typeof data1 + "<br/>")
+
+    data1 = 'hello'
+    document.write("hello data1 type is " + typeof data1 + "<br/>")
+
+    data1 = false;
+    document.write("false data1 type is " + typeof data1 + "<br/>")
+
+    // js는 정수와 실수를 구분하지 않음. 모두 number type 이다.
+    data1 = 0.1;
+    document.write("0.1 data1 type is " + typeof data1 + "<br/>")
+
+    // null 이라는 것은 object 탑인데. 실제 객체가 할당도지 않은 상태의 값
+    data1 = null
+    document.write("null data1 type is " + typeof data1 + "<br/>")
+
+    // prompt 에 유저가 입력한 데이터는 어떤 타입으로 유추가 되는가?
+    // data1 = prompt('데이터를 입력해 주세요')
+    // document.write("prompt data1 type is " + typeof data1 + "<br/>")
+    // prompt에 입력한 데이터는 문자열로 인지
+    // 10을 입력했다 하더라도 "10" 으로 인지
+    // 취소 => object type
+    // prompt 는 문자열 데이터를 받는다. 타입이 없지 않음
+    // 취소하면 값이 없다는 의미에서 null 이 대입되고 그럼으로 object 타입으로 유추
+
+    // 10+20
+    document.write("10 + 20 = "+ (10 + 20) + "<br/>") // 10 + 20 = 30
+    document.write("10 + 20 = "+ ("10" + 20) + "<br/>") // 1020
+
+    //boolean 타입이 true/false 가 대입이 되는 타입임. 언어에 따라 차이가 있음.
+    document.write("Boolean('hello') : "+ Boolean('hello') + "<br/>") // true
+    document.write("Boolean(0) : "+ Boolean(0) + "<br/>") // false
+    document.write("Boolean(1) : "+ Boolean(1) + "<br/>") // true
+    document.write("Boolean(2) : "+ Boolean(2) + "<br/>") // true
+    document.write("Boolean(-1) : "+ Boolean(-1) + "<br/>") // true
+    document.write("Boolean(undefined) : "+ Boolean(undefined) + "<br/>") // false
+    document.write("Boolean(null) : "+ Boolean(null) + "<br/>") // false
+
+    //js 에서는 다른 언어와 다르게 다양한 타입의 데이터(문자열, 숫자등)
+    //boolean 으로 표현   
+    //if 문 같은 조건문을 만들때 다양한 타입의 데이터에 의해 어떻게 판단되는지
+    //의미상으로 true/false 가 아니더라도 데이터가 있다는 의미는 true 없음은false 로 판단
+    //"hello", 1, -2, 10 => true
+    //undefined, null, 0 => false, 0을 false로 판단하는 것은 2진법이기때문
+    
+    
+
+  </script>
+</body>
+</html>

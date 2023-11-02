@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var no = prompt('2 이상의 숫자를 입력하세요')
+    var message = ''
+    if (no !== null) {
+      if (no > 1) {
+        var result = []
+        var dv = 2
+        for (var i = 2; i < no; i++) {
+          var isPrimeNumber = true
+          while (dv < no) {
+            if (no % dv === 0) {
+              var result = (no % dv === 0)
+              document.write(result)
+              dv++
+
+            }
+          }
+        }
+      } else {
+        message = '2 이상의 숫자를 입력해야합니다.'
+      }
+    } else {
+      message = '입력하지 않았습니다.'
+    }
+    document.write(message)
+  </script>
+</body>
+
+</html>
+
+<script>
+  var no = prompt('2 이상의 숫자를 입력하세요')
+
+  //어떤 수가(10).. 소수인지를 판단.. 2부터 증가시셔서 나누어 봐야.. ==> loop 
+  //2부터.. 입력받은 수까지.. 증가시키면서 소수인지를 판단.. ==>loop
+
+
+
+  var message = ''
+  if (no !== null) {
+    if (no > 1) {
+      var result = []
+      for (var i = 2; i < no; i++) {
+        var isPrimeNumber = true
+        var divisor = 2
+        while (divisor < i) {
+          if (i % divisor === 0) {
+            isPrimeNumber = false
+            break;
+          } else {
+            divisor++
+          }
+        }
+        if (isPrimeNumber) {
+          result.push(i)
+        }
+
+      }
+      document.write(result)
+    } else {
+      message = '2 이상의 숫자를 입력해야해..'
+    }
+  } else {
+    message = '입력하지 않았어..'
+  }
+  document.write(message)
+</script>

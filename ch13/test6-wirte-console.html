@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function myEvent(){
+      var result = prompt('당신의 이름을 입력해 주세요');
+      document.write('안녕하세요' + result + '님, 환영합니다.')
+      document.write('<div>안녕하세요 <b style="color:blue;">'
+        + result +'</b>님, 환영합니다. <div>')
+    }
+  </script>
+</head>
+<body>
+  <button onclick="myEvent()">click me</button>
+</body>
+</html>

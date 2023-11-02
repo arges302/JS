@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 유저에게 나이를 입력받는다.
+    // 나이가 어린이, 청소년, 어른 인지를 판단. 개별작업 하고싶다.
+    var age = prompt('나이를 입력해 주세요.')
+
+    if (age != null) {
+      if (age < 0 || age > 150) docu4ment.write('장난치십니까?')
+      else if (age < 10) document.write('어린이 입니다.')
+      else if (age < 20) document.write('청소년 입니다.')
+      else document.write('어른 입니다.')
+    }
+    else{
+      document.write('입력을 취소하셨습니다.')
+    }
+
+    // 숫자가 4의 배수인지를 판단.
+    var data = 8
+    var result;
+
+    if(data % 4 === 0){
+      result = '4의 배수입니다.'
+    }else{
+      result = '4의 배수가 아닙니다.'
+    }
+    document.write('result: ' + result + '<br/>')
+
+    // 위의 if-else 를 아래처럼 3항 연산자로 작성해도된다.
+    // if-else 구분, 각 영역이 한줄이고 코드가 실행되어 결과가 나오는 경우에 유용
+    // result 에 ? 뒤 코드 결과가 저장되거나 : 뒤 코드 결과가 저장되거나.
+    result = (data % 4 === 0) ? '4의 배수입니다.' : '4의 배수가 아닙니다.'
+    document.write('result: ' + result + '<br/>')
+
+    result = (data % 4 === 0) ? data * 2 : data + 2
+    document.write('result: ' + result + '<br/>')
+  </script>
+</body>
+
+</html>
