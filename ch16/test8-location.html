@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="goGoogle()">google</button>
+  <script>
+    // 현재 창의 url 정보를 분석해 보자
+    document.write('<p>href : ' +location.href+'</p>')
+    document.write('<p>host : ' +location.host+'</p>')
+    document.write('<p>hostname : ' +location.hostname+'</p>')
+    document.write('<p>hash : ' +location.hash+'</p>')
+    document.write('<p>pathname : ' +location.pathname+'</p>')
+    document.write('<p>port : ' +location.port+'</p>')
+    document.write('<p>protocol : ' +location.protocol+'</p>')
+    document.write('<p>search : ' +location.search+'</p>')
+
+    function goGoogle(){
+      location.href="https://www.google.com"
+    }
+  </script>
+</body>
+</html>
