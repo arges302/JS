@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>기본 출력 요소</h3>
+  <div id="a1">hello</div>
+  <div id="a2"><a href="#">google</a></div>
+  <div id="a3">
+    hello
+    <a href="#">google</a>
+    world
+  </div>
+  <div id="result1"></div>
+  <div id="result2"></div>
+
+  <hr>
+  
+  <script>
+    // node 획득
+    let dom1 = document.getElementById('a1')
+    document.write('<p>' + dom1.innerText + '</p>')
+    document.write('<p>' + dom1.innerHTML + '</p>')
+    
+    document.write('<hr/>')
+    
+    // innerText 는 문자열만 가지고온다
+    // innerHTML 은 tag 그대로 기능까지 다 가지고온다.
+    let dom2 = document.getElementById('a2')
+    document.write('<p>' + dom2.innerText + '</p>')
+    document.write('<p>' + dom2.innerHTML + '</p>')
+
+    document.write('<hr/>')
+
+    // 문자열과 tag가 섞여 있으면 HTML이 좋음.
+    let dom3 = document.getElementById('a3')
+    document.write('<p>' + dom3.innerText + '</p>')
+    document.write('<p>' + dom3.innerHTML + '</p>')
+
+    // js 에서 발생항 데이터를 특정 node에 출력
+    let dom4 = document.getElementById('result1')
+    // 태그가 들어가도 innerText는 단순히 문자열로 인지 되어 그대로 노출
+    dom4.innerText = '<a href="#">naver</a>'
+    
+    let dom5 = document.getElementById('result2')
+    // 태그에 의한 ui효과를 적용해서 출력
+    dom5.innerHTML = '<a href="#">naver</a>'
+
+    // 
+  </script>
+</body>
+</html>
